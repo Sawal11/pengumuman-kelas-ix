@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/mtst2537/public_html/pengumuman.mtssapo.sch.id/
+    - /bin/rsync -av --delete --exclude='.git' --exclude='.cpanel.yml' --exclude='config.php' --exclude='.env' --exclude='*.zip' ./ $DEPLOYPATH
